@@ -1,6 +1,5 @@
-project: rnshah9/neper
+project: neper
 target: neper
-tests: null
 
 cmds:
   - cmd: /repo/src/build/neper -T -loadtesr @@ -transform autocrop -o ot
