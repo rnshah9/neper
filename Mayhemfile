@@ -2,4 +2,4 @@ project: neper
 target: neper
 
 cmds:
-  - cmd: /repo/src/build/neper -T -loadtesr @@ -transform autocrop -o ot
+  - cmd: /install/bin/neper -T -loadtesr @@ -transform autocrop -o ot
