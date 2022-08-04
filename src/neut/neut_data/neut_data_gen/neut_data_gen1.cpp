@@ -13,8 +13,9 @@ neut_data_coldatatype_size (struct DATA Data, int *psize)
     (*psize) = 1;
   else if (!strcmp (Data.ColDataType, "col"))
     (*psize) = 3;
+  // for ori, we are talking about coldata (not col), which contains quaternions
   else if (!strcmp (Data.ColDataType, "ori"))
-    (*psize) = 3;
+    (*psize) = 4;
   else
     (*psize) = -1;
 
@@ -434,6 +435,9 @@ neut_data_datastring_type_value (char *entity, char *attribute,
     char **args = NULL;
 
     ut_list_break (datastring, NEUT_SEP_DEP, &args, &argqty);
+    // patch to let colors provided as <R_value>:<G_value>:<B_value> slide
+    if (isdigit (args[0][0]))
+      ut_list_break (datastring, "fdsk,fdslkf,dsl", &args, &argqty);
 
     if (argqty == 1)
     {

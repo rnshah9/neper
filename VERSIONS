@@ -1,11 +1,17 @@
-New in 4.4.2-16 (09 May 2022):
-- module -T: made minor fixes.
+New in 4.4.2-33 (19 Jul 2022):
+- module -T: fixed -morpho cube, made minor fixes, added -statcell and -statvox
+  <orientation_descriptor>, added -ori :flat, added -transform ori, made minor
+  fix to the objective function for tesr (does not change the result), made
+  minor fixes to -statface and -statpoly.
 - module -M: added -transform node and ori, fixed -stateltco and -statelsetco,
   made minor fix to inp output, made minor fixes, added -stat{elt,elset}{1d,2d}
-  theta.
+  theta, added -statelt and -statelset <orientation_descriptor>, added
+  -statelset* elts,nodenb,nodes.
 - module -S: fixed various bugs related to the initial state, made minor other
   fixes.
-- general: made various installation improvements.
+- module -V: made minor fixes.
+- general: fixed FORCE_BUILTIN_* configuration options, made various
+  installation improvements.
 
 New in 4.4.1 (09 Mar 2022):
 - module -T: improved -morpho lamellar to avoid unrealistically small lamellae
